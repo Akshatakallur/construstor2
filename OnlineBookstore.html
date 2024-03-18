@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bookstore</title>
+</head>
+<body>
+    <h1>BookStore</h1>
+</body>
+</html>
+<script>
+    function Author(name, birthYear, nationality){
+        this.name = name;
+        this.birthYear = birthYear;
+        this.nationality = nationality;
+    }
+
+    function Book(title,author,genre,price){
+        this.title = title;
+        this.author = author;
+        this.genre = genre;
+        this.price = price;
+    }
+
+    Book.prototype.getBookInfo = function() {
+        console.log(`Title : ${this.title}`);
+        console.log(`Author : ${this.name}`);
+        console.log(`Genre : ${this.genre}`);
+        console.log(`Price : ${this.price}`);
+    };
+
+    const author1 = new Author("Colleen Hoove", 1979 , "America");
+    const author2 = new Author("Dan Brown", 1964 , "British");
+
+    const book1 = new Book("It Ends with Us",author1,"Love",265);
+    const book2 = new Book("The Da Vinci Code", author2,"Mystery",254);
+    
+    // author1.getBookInfo();
+    // author2.getBookInfo();
+    book1.getBookInfo();
+    book2.getBookInfo();
+
+</script>
